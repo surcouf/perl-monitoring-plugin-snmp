@@ -1,0 +1,5 @@
+libmonitoring-plugin-snmp-perl (0.01-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Raphaël 'SurcouF' Bordet <surcouf@debianfr.net>  Mon, 17 Mar 2008 01:30:40 +0100

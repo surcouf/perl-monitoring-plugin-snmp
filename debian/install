@@ -1,0 +1,7 @@
+plugins/check_ucd-snmp_exttable.pl	usr/lib/nagios/plugins
+plugins/check_ucd-snmp_filetable.pl	usr/lib/nagios/plugins
+plugins/check_net-snmp_sensors.pl	usr/lib/nagios/plugins
+
+plugins/check_sun-platform_sensors.pl	usr/lib/nagios/plugins
+plugins/mibs/ENTITY-MIB.txt		usr/share/snmp/mibs
+plugins/mibs/SUN-PLATFORM-MIB.txt	usr/share/snmp/mibs

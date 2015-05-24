@@ -1,0 +1,14 @@
+This is the debian package for the Monitoring::Plugin::SNMP module.
+It was created by Raphaël 'SurcouF' Bordet <surcouf@debianfr.net> using dh-make-perl.
+
+This copyright info was automatically extracted from the perl module.
+It may not be accurate, so you better check the module sources
+if don't want to get into legal troubles.
+
+The upstream author is: 
+
+Raphaël 'SurcouF' Bordet, <surcouf at debianfr.net>.
+
+Copyright: 
+
+Copyright (C) 2008-2015 Raphael 'SurcouF' Bordet
