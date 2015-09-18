@@ -143,7 +143,7 @@ switch( $plugin->opts->type ) {
 	case "volt" { }
 	case "misc" { }
 	else {
-		$plugin->nagios_exit(
+		$plugin->plugin_exit(
 			$status,
 			"Wrong sensors type ! Please select one of them : \n"
 			." - 'temp',\n"
@@ -235,19 +235,19 @@ if ( defined( $plugin->opts->name ) ) {
 				}
 			}
 			elsif ( $plugin->opts->type eq 'fan' ) {
-				$plugin->nagios_exit(
+				$plugin->plugin_exit(
 						message		=> "Not implemented yet.",
 						return_code	=> $status,
 					);
 			}
 			elsif ( $plugin->opts->type eq 'volt' ) {
-				$plugin->nagios_exit(
+				$plugin->plugin_exit(
 						message		=> "Not implemented yet.",
 						return_code	=> $status,
 					);
 			}
 			elsif ( $plugin->opts->type eq 'misc' ) {
-				$plugin->nagios_exit(
+				$plugin->plugin_exit(
 						message		=> "Not implemented yet.",
 						return_code	=> $status,
 					);
@@ -262,7 +262,7 @@ if ( defined( $plugin->opts->name ) ) {
 
 ($status, $output) = $plugin->check_messages();
 
-$plugin->nagios_exit(
+$plugin->plugin_exit(
 		message		=> $output,
 		return_code	=> $status,
 	);

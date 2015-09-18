@@ -152,7 +152,7 @@ foreach my $logmatch ( @$resultat ) {
 
 ($status,$output) = $plugin->check_messages();
 
-$plugin->nagios_exit(
+$plugin->plugin_exit(
    		$status,
 		$output,
 	);

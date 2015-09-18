@@ -113,7 +113,7 @@ if ( defined( $plugin->opts->type ) ) {
 	$type = $types{ $plugin->opts->type };
 
 	if ( not defined($type) ) {
-		 $plugin->nagios_die( "Unknown type of sensor (". $plugin->opts->type .")" );
+		 $plugin->plugin_die( "Unknown type of sensor (". $plugin->opts->type .")" );
 	}
 
 }
@@ -314,7 +314,7 @@ foreach my $entity ( @$entities ) {
 
 ($status, $output)	= $plugin->check_messages();
 
-$plugin->nagios_exit(
+$plugin->plugin_exit(
 		message		=> $output,
 		return_code	=> $status,
 	);

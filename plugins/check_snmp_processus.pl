@@ -187,7 +187,7 @@ foreach my $result ( @{$resultat} ) {
 
 ($status, $output) = $plugin->check_messages();
 
-$plugin->nagios_exit(
+$plugin->plugin_exit(
 		message		=> $output,
 		return_code	=> $status,
 	);

@@ -106,7 +106,7 @@ $resultat = $ucdsnmp_filetable->get_named_table_by_name(
 
 $output = $$resultat{'sortie'};
 if (not defined($output) ) {
-	$ucdsnmp_filetable->nagios_die(
+	$ucdsnmp_filetable->plugin_die(
 			"Can't find any file that matches ". 
 				$ucdsnmp_filetable->opts->name,
 		);
@@ -157,7 +157,7 @@ else {
 	}
 }
 
-$ucdsnmp_filetable->nagios_exit(
+$ucdsnmp_filetable->plugin_exit(
    		$status,
 		$output,
 	);

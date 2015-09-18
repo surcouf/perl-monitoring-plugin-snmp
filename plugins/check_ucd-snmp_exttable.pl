@@ -107,7 +107,7 @@ foreach my $resultat ( @$commands ) {
 
 	$output = $$resultat{'sortie'};
 	if (not defined($output) ) {
-		$ucdsnmp_exttable->nagios_die(
+		$ucdsnmp_exttable->plugin_die(
 				"Can't find any extension that matches ". 
 					$ucdsnmp_exttable->opts->name,
 			);

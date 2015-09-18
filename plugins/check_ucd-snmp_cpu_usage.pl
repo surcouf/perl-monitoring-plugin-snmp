@@ -157,7 +157,7 @@ if ( $total > 0 ) {
 	}
 }
 else {
-	$ucdsnmp_cpu_usage->nagios_die( "No difference between checks (delay: $waiting)..." );
+	$ucdsnmp_cpu_usage->plugin_die( "No difference between checks (delay: $waiting)..." );
 }
 
 #==========================================================================
@@ -165,7 +165,7 @@ else {
 #==========================================================================
 
 ($status, $output) = $ucdsnmp_cpu_usage->check_messages();
-$ucdsnmp_cpu_usage->nagios_exit(
+$ucdsnmp_cpu_usage->plugin_exit(
 		message		=> $output,
 		return_code	=> $status,
 	);

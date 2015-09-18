@@ -109,7 +109,7 @@ $resultat = $ucdsnmp_prtable->get_named_table_by_name(
 	  );
 
 if (not defined($$resultat{'name'}) ) {
-	$ucdsnmp_prtable->nagios_die(
+	$ucdsnmp_prtable->plugin_die(
 			"Can't find any processus that matches "
 			. $ucdsnmp_prtable->opts->name,
 		);
@@ -189,7 +189,7 @@ else {
 #==========================================================================
 
 ($status,$output) = $ucdsnmp_prtable->check_messages;
-$ucdsnmp_prtable->nagios_exit(
+$ucdsnmp_prtable->plugin_exit(
    		$status,
 		$output,
 	);

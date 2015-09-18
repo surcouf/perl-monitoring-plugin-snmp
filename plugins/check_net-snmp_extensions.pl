@@ -104,7 +104,7 @@ $resultat = $netsnmp_extensions->get_named_table_by_index(
 
 $output = $$resultat{'sortie'};
 if (not defined($output) ) {
-	$netsnmp_extensions->nagios_die(
+	$netsnmp_extensions->plugin_die(
 			"Can't find any extension that matches ". 
 				$netsnmp_extensions->opts->name,
 		);
@@ -134,7 +134,7 @@ else {
 #==========================================================================
 
 ($status, $output) = $netsnmp_extensions->check_messages();
-$netsnmp_extensions->nagios_exit(
+$netsnmp_extensions->plugin_exit(
 		message		=> $output,
 		return_code	=> $status,
 	);
